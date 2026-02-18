@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyrics Overlay Settings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="settings-main">
+      <h1>Overlay Settings</h1>
+
+      <label class="field">
+        <span>Opacity</span>
+        <input id="opacity" type="range" min="0.1" max="1" step="0.05" />
+        <output id="opacity-output"></output>
+      </label>
+
+      <label class="field">
+        <span>Font Size</span>
+        <input id="fontSize" type="range" min="16" max="96" step="1" />
+        <output id="font-size-output"></output>
+      </label>
+
+      <label class="field">
+        <span>Font Family</span>
+        <input id="fontFamily" type="text" placeholder="e.g. Inter, Arial, sans-serif" />
+      </label>
+
+      <label class="field">
+        <span>Refresh Interval (ms)</span>
+        <input id="pollingMs" type="number" min="1000" step="500" />
+      </label>
+
+      <p class="note">Windows 11 build: reads Spotify/browser media sessions through Windows System Media Transport Controls.</p>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
