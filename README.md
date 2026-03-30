@@ -44,3 +44,10 @@ npm start
 - Add draggable overlay position and multi-monitor placement.
 - Add click-through toggle hotkey.
 - Add packaging/signing with `electron-builder` for Windows release installs.
+
+
+## Troubleshooting
+
+- If Spotify shows as playing but overlay says no active media, restart Spotify once so Windows media session is refreshed.
+- In Spotify settings, keep **Display the currently playing song as a status** enabled.
+- If lyrics are missing for some songs, the app now retries with LRCLIB search fallback, but not all tracks are indexed.
