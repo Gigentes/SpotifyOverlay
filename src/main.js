@@ -1,7 +1,8 @@
 const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const { execFile } = require('node:child_process');
 const path = require('node:path');
-const Store = require('electron-store');
+const StoreModule = require('electron-store');
+const Store = StoreModule.default || StoreModule;
 
 const store = new Store({
   defaults: {
